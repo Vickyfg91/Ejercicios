@@ -12,10 +12,7 @@ import java.util.ArrayList;
  * @author snavgar
  */
 public class Carrito {
-    
-    //Carrito cambia a map
-    
-    /*private PasarelaDePago pasarelaPago;
+    private PasarelaDePago pasarelaPago;
     private ArrayList<ProductoVenta> m_carrito;
     
     public Carrito(){
@@ -56,24 +53,24 @@ public class Carrito {
     }
     
     public String ProcesarCompra(String numeroTarjeta){
-        //Si la lista no está vacía
-                //Recorrer la lista y calcular el precio total
-                //Añadir la lista a las compras totales
-                //Restar de la base datos la cantidad de elementos
-                //Generar el ticket (ToSTRING)
-         //Si todo ha salido bien
-            //devuelve la lista que se guardar en la lista de compras del tpv
+        /*Si la lista no está vacía*/
+                /*Recorrer la lista y calcular el precio total*/
+                /*Añadir la lista a las compras totales*/
+                /*Restar de la base datos la cantidad de elementos*/
+                /*Generar el ticket (ToSTRING)*/
+         /*Si todo ha salido bien*/
+            /*devuelve la lista que se guardar en la lista de compras del tpv*/
             double totalAcobrar=0;
             for(ProductoVenta pv : m_carrito){
                 totalAcobrar+= (pv.get_precio()*(pv.Iva.get_iva()));
             }
-            //Tarjeta a validar
+            /*Tarjeta a validar*/
             String Tarjeta;
             if(numeroTarjeta.isBlank()|| numeroTarjeta.isEmpty()){
                 return "Inserte una tarjeta valida";
             }
             Tarjeta=numeroTarjeta;
-            //Procesa el pago y retira fondos de la tarjeta devuelve true o false si lo consigue
+            /*Procesa el pago y retira fondos de la tarjeta devuelve true o false si lo consigue*/
             boolean estado=pasarelaPago.ProcesoDePago(totalAcobrar,Tarjeta);
          
             if(estado){
@@ -82,12 +79,12 @@ public class Carrito {
                return ticketResultado;
             }
             else{
-                //NFORMO DEL ERROR DURANTE LA PASARELA DE PAGO
+                /*INFORMO DEL ERROR DURANTE LA PASARELA DE PAGO*/
                   String resultadoError= "Se ha producido un Error al realizar el cargo";
                   return resultadoError;
-                //VOLVER AL MENU PRINCIPAL}
+                /*VOLVER AL MENU PRINCIPAL*/}
     }
-    //Devuelve el texto con el ticket que debe ser mostrado en el JoptionPane
+    /*Devuelve el texto con el ticket que debe ser mostrado en el JoptionPane*/
     private String ProcesarTicket(){
                 Tpv.VENTASTOTALES+=1;
                 Ticket ticket = new Ticket(Tpv.VENTASTOTALES,m_carrito.size());
@@ -104,8 +101,8 @@ public class Carrito {
     }
     
      private void limpiarLista(){
-    //Limpia la lista de los productos en el carrito
+    /*Limpia la lista de los productos en el carrito*/
         m_carrito.clear();
-    }*/
+    }
     
 }

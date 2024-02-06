@@ -73,9 +73,10 @@ public class SopaLetras {
             for (int j = 0; j < matriz[i].length; j++) {
                 System.out.print(matriz[i][j]);
                 if (j != matriz[i].length - 1) {
-                    System.out.print("\t");
-                }
+                    
+                }System.out.print(" ");
             }
+            
             System.out.println("|");
         }
     }

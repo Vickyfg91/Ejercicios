@@ -19,5 +19,4 @@
         <maven.compiler.target>20</maven.compiler.target>
         <exec.mainClass>DawFood.DawFood</exec.mainClass>
     </properties>
-    <name>MapDawFood</name>
 </project>
