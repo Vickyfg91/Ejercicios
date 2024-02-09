@@ -39,8 +39,9 @@ public class Numeros {
                 }
             }
         return repeticiones;
-        
-        
     }
+    
+    //B - Lista sin duplicar (lista) hacer una lista 
+    
 
 }
