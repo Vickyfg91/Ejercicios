@@ -15,22 +15,34 @@ public class EjercRecursividad {
     
     //3- Clase carrito
     public static void main(String[] args) {
-       int[]arrayNumeros = new int[10];
-       arrayNumeros[0] = 1;        
-       arrayNumeros[1] = 2;
-       arrayNumeros[2] = 3; 
-       arrayNumeros[3] = 1; 
-       arrayNumeros[4] = 1; 
-       arrayNumeros[5] = 1; 
-       arrayNumeros[6] = 1; 
-       arrayNumeros[7] = 1; 
-       arrayNumeros[8] = 1; 
-       arrayNumeros[9] = 1; 
-        
+
+       int[] arrayNumeros= {1,2,3,4,5,6,7,8,9};         
+       int num = 0;
+       
+       mostrarValoresRecursivos(arrayNumeros, num);
+        System.out.println("Suma " + sumarValoresRecursivos( arrayNumeros, num));
+
+       
     }
     
-   
-        
-        
-    
+    public static void mostrarValoresRecursivos(int[] arrayNumeros, int posicion) {
+        if (posicion < arrayNumeros.length) {
+            System.out.print("[" + arrayNumeros[posicion] + "]" + " ");
+            mostrarValoresRecursivos(arrayNumeros, ++posicion);
+        } else {
+            System.out.println("\nSe ha excedido el array");
+        }
+
+    }
+
+
+    public static int sumarValoresRecursivos(int[] arrayNumeros, int posicion) {
+        int suma = 0;
+        if (posicion < arrayNumeros.length) {
+            suma = arrayNumeros[posicion];
+            return suma + sumarValoresRecursivos(arrayNumeros, ++posicion);
+        }
+
+        return suma;
+    }
 }
