@@ -14,7 +14,7 @@ public class Profesor extends Trabajador implements CursoReciclaje{
     public void cotizar() {
         System.out.println("Cotizando como profesor.");
     }
-    
+    //INTERFACE
     @Override
     public void hacerCurso(int numeroHoras) {
         System.out.println("Muy bien, aunque sea de dos horas te voy a subir 1000€");
